@@ -2,10 +2,6 @@
 
 MuePlayer是一个基于Qt框架开发的音乐播放器项目，主要用于学习和实践Qt的基础功能，包括界面设计、自定义控件、音乐管理、播放控制等功能。
 
-![](https://gitee.com/UtoCoo/MuePlayer/raw/master/MuePlayer.png)
-
-![](https://gitee.com/UtoCoo/MuePlayer/raw/master/LrcPage.png)
-
 ## 界面基础
 
 ### 窗口设置
