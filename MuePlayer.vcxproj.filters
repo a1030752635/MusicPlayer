@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="buttonform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="commonpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="listitembox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lrcpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mueplayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="music.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="musiclist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="musicslider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="recbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="recboxitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumetool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="buttonform.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="commonpage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="listitembox.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="lrcpage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mueplayer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="music.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="musiclist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="musicslider.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="recbox.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="recboxitem.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="volumetool.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_buttonform.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_buttonform.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_commonpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_commonpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_listitembox.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_listitembox.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_lrcpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_lrcpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_mueplayer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_mueplayer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_musicslider.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_musicslider.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <ClCompile Include="debug\moc_recbox.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_recbox.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_recboxitem.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_recboxitem.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_volumetool.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_volumetool.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\qrc_IMAGE.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\qrc_IMAGE.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClInclude Include="ui_buttonform.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_commonpage.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_listitembox.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_lrcpage.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mueplayer.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_musicslider.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_recbox.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_recboxitem.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_volumetool.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="buttonform.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="commonpage.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="listitembox.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="lrcpage.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mueplayer.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="musicslider.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="recbox.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="recboxitem.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="volumetool.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\rec\001.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\003.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\004.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\005.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\006.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\007.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\008.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\009.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\010.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\011.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\012.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\013.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\014.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\015.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\016.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\017.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\018.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\019.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\020.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\021.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\022.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\023.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\024.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\025.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\026.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\027.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\028.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\029.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\030.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\031.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\032.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\033.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\034.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\035.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\036.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\037.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\038.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\039.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec\040.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <CustomBuild Include="IMAGE.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="image\Logo.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\add.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\bg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\ci.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\cyx.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\default_cover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\down.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\down_page.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\ilikebg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\like.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\like_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\like_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\like_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\list_play.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\local.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\localbg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\max.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\min.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\music.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\non-music.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\order_play.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\play.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\play3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\play_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\play_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\quit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\radio.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rec.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\recent.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\recentbg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\shuffle.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\shuffle_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\silent.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\single_play.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\skin.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\tubiao.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\up.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\up_page.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\volumn.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\xiala.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

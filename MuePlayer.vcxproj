@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4375934C-4DFF-3EE9-A03B-61FFDC7FCB41}</ProjectGuid>
+    <RootNamespace>MuePlayer</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>MuePlayer</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>MuePlayer</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>MuePlayer</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>MuePlayer</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MuePlayer</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MuePlayer</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MuePlayer</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MuePlayer</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtMultimedia;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtWidgets;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtGui;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtANGLE;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtNetwork;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtSql;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtCore;release;.;/include;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_NO_DEBUG_OUTPUT;QT_DEPRECATED_WARNINGS;NDEBUG;QT_NO_DEBUG;QT_MULTIMEDIA_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Multimedia.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Widgets.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Gui.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Network.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Sql.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Core.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\qtmain.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\MuePlayer.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_NO_DEBUG_OUTPUT;QT_DEPRECATED_WARNINGS;NDEBUG;QT_NO_DEBUG;QT_MULTIMEDIA_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtMultimedia;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtWidgets;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtGui;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtANGLE;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtNetwork;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtSql;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtCore;release;.;/include;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_NO_DEBUG_OUTPUT;QT_DEPRECATED_WARNINGS;NDEBUG;QT_NO_DEBUG;QT_MULTIMEDIA_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Multimedia.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Widgets.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Gui.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Network.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Sql.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Core.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\qtmain.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\MuePlayer.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_NO_DEBUG_OUTPUT;QT_DEPRECATED_WARNINGS;NDEBUG;QT_NO_DEBUG;QT_MULTIMEDIA_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtMultimedia;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtWidgets;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtGui;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtANGLE;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtNetwork;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtSql;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtCore;debug;.;/include;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_NO_DEBUG_OUTPUT;QT_DEPRECATED_WARNINGS;QT_MULTIMEDIA_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Multimediad.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Widgetsd.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Guid.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Networkd.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Sqld.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Cored.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\qtmaind.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\MuePlayer.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_NO_DEBUG_OUTPUT;QT_DEPRECATED_WARNINGS;QT_MULTIMEDIA_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtMultimedia;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtWidgets;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtGui;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtANGLE;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtNetwork;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtSql;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\include\QtCore;debug;.;/include;..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_NO_DEBUG_OUTPUT;QT_DEPRECATED_WARNINGS;QT_MULTIMEDIA_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Multimediad.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Widgetsd.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Guid.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Networkd.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Sqld.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\Qt5Cored.lib;G:\QT_env\QT5\5.15.2\msvc2019_64\lib\qtmaind.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\MuePlayer.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_NO_DEBUG_OUTPUT;QT_DEPRECATED_WARNINGS;QT_MULTIMEDIA_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="buttonform.cpp" />
+    <ClCompile Include="commonpage.cpp" />
+    <ClCompile Include="listitembox.cpp" />
+    <ClCompile Include="lrcpage.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mueplayer.cpp" />
+    <ClCompile Include="music.cpp" />
+    <ClCompile Include="musiclist.cpp" />
+    <ClCompile Include="musicslider.cpp" />
+    <ClCompile Include="recbox.cpp" />
+    <ClCompile Include="recboxitem.cpp" />
+    <ClCompile Include="volumetool.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="buttonform.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">buttonform.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">buttonform.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore buttonform.h -o release\moc_buttonform.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore buttonform.h -o release\moc_buttonform.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC buttonform.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC buttonform.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_buttonform.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_buttonform.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">buttonform.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">buttonform.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore buttonform.h -o debug\moc_buttonform.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore buttonform.h -o debug\moc_buttonform.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC buttonform.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC buttonform.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_buttonform.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_buttonform.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="commonpage.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">commonpage.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">commonpage.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore commonpage.h -o release\moc_commonpage.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore commonpage.h -o release\moc_commonpage.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC commonpage.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC commonpage.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_commonpage.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_commonpage.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">commonpage.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">commonpage.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore commonpage.h -o debug\moc_commonpage.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore commonpage.h -o debug\moc_commonpage.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC commonpage.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC commonpage.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_commonpage.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_commonpage.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="listitembox.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">listitembox.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">listitembox.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore listitembox.h -o release\moc_listitembox.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore listitembox.h -o release\moc_listitembox.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC listitembox.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC listitembox.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_listitembox.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_listitembox.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">listitembox.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">listitembox.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore listitembox.h -o debug\moc_listitembox.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore listitembox.h -o debug\moc_listitembox.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC listitembox.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC listitembox.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_listitembox.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_listitembox.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="lrcpage.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">lrcpage.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lrcpage.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore lrcpage.h -o release\moc_lrcpage.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore lrcpage.h -o release\moc_lrcpage.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC lrcpage.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC lrcpage.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_lrcpage.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_lrcpage.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">lrcpage.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lrcpage.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore lrcpage.h -o debug\moc_lrcpage.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore lrcpage.h -o debug\moc_lrcpage.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC lrcpage.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC lrcpage.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_lrcpage.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_lrcpage.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="mueplayer.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mueplayer.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mueplayer.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore mueplayer.h -o release\moc_mueplayer.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore mueplayer.h -o release\moc_mueplayer.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC mueplayer.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC mueplayer.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_mueplayer.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_mueplayer.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mueplayer.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mueplayer.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore mueplayer.h -o debug\moc_mueplayer.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore mueplayer.h -o debug\moc_mueplayer.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC mueplayer.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC mueplayer.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_mueplayer.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_mueplayer.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="music.h" />
+    <ClInclude Include="musiclist.h" />
+    <CustomBuild Include="musicslider.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">musicslider.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">musicslider.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore musicslider.h -o release\moc_musicslider.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore musicslider.h -o release\moc_musicslider.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC musicslider.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC musicslider.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_musicslider.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_musicslider.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">musicslider.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">musicslider.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore musicslider.h -o debug\moc_musicslider.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore musicslider.h -o debug\moc_musicslider.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC musicslider.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC musicslider.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_musicslider.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_musicslider.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="recbox.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">recbox.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">recbox.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore recbox.h -o release\moc_recbox.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore recbox.h -o release\moc_recbox.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC recbox.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC recbox.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_recbox.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_recbox.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">recbox.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">recbox.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore recbox.h -o debug\moc_recbox.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore recbox.h -o debug\moc_recbox.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC recbox.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC recbox.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_recbox.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_recbox.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="recboxitem.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">recboxitem.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">recboxitem.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore recboxitem.h -o release\moc_recboxitem.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore recboxitem.h -o release\moc_recboxitem.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC recboxitem.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC recboxitem.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_recboxitem.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_recboxitem.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">recboxitem.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">recboxitem.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore recboxitem.h -o debug\moc_recboxitem.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore recboxitem.h -o debug\moc_recboxitem.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC recboxitem.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC recboxitem.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_recboxitem.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_recboxitem.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="volumetool.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">volumetool.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">volumetool.h;release\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore volumetool.h -o release\moc_volumetool.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DNDEBUG -DQT_NO_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/release/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore volumetool.h -o release\moc_volumetool.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC volumetool.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC volumetool.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_volumetool.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_volumetool.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">volumetool.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">volumetool.h;debug\moc_predefs.h;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore volumetool.h -o debug\moc_volumetool.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_NO_DEBUG_OUTPUT -DQT_DEPRECATED_WARNINGS -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include G:/VS_Studio_2022_project/QT/MuePlayer/debug/moc_predefs.h -IG:/QT_env/QT5/5.15.2/msvc2019_64/mkspecs/win32-msvc -IG:/VS_Studio_2022_project/QT/MuePlayer -IG:/QT_env/QT5/5.15.2/msvc2019_64/include -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtMultimedia -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtWidgets -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtGui -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtANGLE -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtNetwork -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtSql -IG:/QT_env/QT5/5.15.2/msvc2019_64/include/QtCore volumetool.h -o debug\moc_volumetool.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC volumetool.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC volumetool.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_volumetool.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_volumetool.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_buttonform.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_buttonform.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_commonpage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_commonpage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_listitembox.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_listitembox.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_lrcpage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_lrcpage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_mueplayer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_mueplayer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_musicslider.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_musicslider.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl -BxG:\QT_env\QT5\5.15.2\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -BxG:\QT_env\QT5\5.15.2\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl -BxG:\QT_env\QT5\5.15.2\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -BxG:\QT_env\QT5\5.15.2\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\QT_env\QT5\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <ClCompile Include="debug\moc_recbox.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_recbox.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_recboxitem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_recboxitem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_volumetool.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_volumetool.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\qrc_IMAGE.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\qrc_IMAGE.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="ui_buttonform.h" />
+    <ClInclude Include="ui_commonpage.h" />
+    <ClInclude Include="ui_listitembox.h" />
+    <ClInclude Include="ui_lrcpage.h" />
+    <ClInclude Include="ui_mueplayer.h" />
+    <ClInclude Include="ui_musicslider.h" />
+    <ClInclude Include="ui_recbox.h" />
+    <ClInclude Include="ui_recboxitem.h" />
+    <ClInclude Include="ui_volumetool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="buttonform.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">buttonform.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">buttonform.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe buttonform.ui -o ui_buttonform.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe buttonform.ui -o ui_buttonform.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC buttonform.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC buttonform.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_buttonform.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_buttonform.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">buttonform.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">buttonform.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe buttonform.ui -o ui_buttonform.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe buttonform.ui -o ui_buttonform.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC buttonform.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC buttonform.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_buttonform.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_buttonform.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="commonpage.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">commonpage.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">commonpage.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe commonpage.ui -o ui_commonpage.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe commonpage.ui -o ui_commonpage.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC commonpage.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC commonpage.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_commonpage.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_commonpage.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">commonpage.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">commonpage.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe commonpage.ui -o ui_commonpage.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe commonpage.ui -o ui_commonpage.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC commonpage.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC commonpage.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_commonpage.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_commonpage.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="listitembox.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">listitembox.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">listitembox.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe listitembox.ui -o ui_listitembox.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe listitembox.ui -o ui_listitembox.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC listitembox.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC listitembox.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_listitembox.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_listitembox.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">listitembox.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">listitembox.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe listitembox.ui -o ui_listitembox.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe listitembox.ui -o ui_listitembox.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC listitembox.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC listitembox.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_listitembox.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_listitembox.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="lrcpage.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">lrcpage.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lrcpage.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe lrcpage.ui -o ui_lrcpage.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe lrcpage.ui -o ui_lrcpage.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC lrcpage.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC lrcpage.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_lrcpage.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_lrcpage.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">lrcpage.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lrcpage.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe lrcpage.ui -o ui_lrcpage.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe lrcpage.ui -o ui_lrcpage.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC lrcpage.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC lrcpage.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_lrcpage.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_lrcpage.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="mueplayer.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mueplayer.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;buttonform.h;recbox.h;commonpage.h;musicslider.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mueplayer.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;buttonform.h;recbox.h;commonpage.h;musicslider.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe mueplayer.ui -o ui_mueplayer.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe mueplayer.ui -o ui_mueplayer.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC mueplayer.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC mueplayer.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_mueplayer.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_mueplayer.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mueplayer.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;buttonform.h;recbox.h;commonpage.h;musicslider.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mueplayer.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;buttonform.h;recbox.h;commonpage.h;musicslider.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe mueplayer.ui -o ui_mueplayer.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe mueplayer.ui -o ui_mueplayer.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC mueplayer.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC mueplayer.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_mueplayer.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_mueplayer.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="musicslider.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">musicslider.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">musicslider.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe musicslider.ui -o ui_musicslider.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe musicslider.ui -o ui_musicslider.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC musicslider.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC musicslider.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_musicslider.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_musicslider.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">musicslider.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">musicslider.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe musicslider.ui -o ui_musicslider.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe musicslider.ui -o ui_musicslider.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC musicslider.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC musicslider.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_musicslider.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_musicslider.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="recbox.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">recbox.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">recbox.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe recbox.ui -o ui_recbox.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe recbox.ui -o ui_recbox.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC recbox.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC recbox.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_recbox.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_recbox.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">recbox.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">recbox.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe recbox.ui -o ui_recbox.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe recbox.ui -o ui_recbox.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC recbox.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC recbox.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_recbox.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_recbox.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="recboxitem.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">recboxitem.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">recboxitem.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe recboxitem.ui -o ui_recboxitem.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe recboxitem.ui -o ui_recboxitem.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC recboxitem.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC recboxitem.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_recboxitem.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_recboxitem.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">recboxitem.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">recboxitem.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe recboxitem.ui -o ui_recboxitem.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe recboxitem.ui -o ui_recboxitem.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC recboxitem.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC recboxitem.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_recboxitem.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_recboxitem.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="volumetool.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">volumetool.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">volumetool.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe volumetool.ui -o ui_volumetool.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe volumetool.ui -o ui_volumetool.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC volumetool.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC volumetool.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_volumetool.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_volumetool.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">volumetool.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">volumetool.ui;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe volumetool.ui -o ui_volumetool.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\uic.exe volumetool.ui -o ui_volumetool.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC volumetool.ui</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC volumetool.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_volumetool.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_volumetool.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\rec\001.png" />
+    <None Include="image\rec\003.png" />
+    <None Include="image\rec\004.png" />
+    <None Include="image\rec\005.png" />
+    <None Include="image\rec\006.png" />
+    <None Include="image\rec\007.png" />
+    <None Include="image\rec\008.png" />
+    <None Include="image\rec\009.png" />
+    <None Include="image\rec\010.png" />
+    <None Include="image\rec\011.png" />
+    <None Include="image\rec\012.png" />
+    <None Include="image\rec\013.png" />
+    <None Include="image\rec\014.png" />
+    <None Include="image\rec\015.png" />
+    <None Include="image\rec\016.png" />
+    <None Include="image\rec\017.png" />
+    <None Include="image\rec\018.png" />
+    <None Include="image\rec\019.png" />
+    <None Include="image\rec\020.png" />
+    <None Include="image\rec\021.png" />
+    <None Include="image\rec\022.png" />
+    <None Include="image\rec\023.png" />
+    <None Include="image\rec\024.png" />
+    <None Include="image\rec\025.png" />
+    <None Include="image\rec\026.png" />
+    <None Include="image\rec\027.png" />
+    <None Include="image\rec\028.png" />
+    <None Include="image\rec\029.png" />
+    <None Include="image\rec\030.png" />
+    <None Include="image\rec\031.png" />
+    <None Include="image\rec\032.png" />
+    <None Include="image\rec\033.png" />
+    <None Include="image\rec\034.png" />
+    <None Include="image\rec\035.png" />
+    <None Include="image\rec\036.png" />
+    <None Include="image\rec\037.png" />
+    <None Include="image\rec\038.png" />
+    <None Include="image\rec\039.png" />
+    <None Include="image\rec\040.png" />
+    <CustomBuild Include="IMAGE.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">IMAGE.qrc;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\rcc.exe;image\like.png;image\add.png;image\shuffle.png;image\play_on.png;image\rec.png;image\shuffle_2.png;image\recent.png;image\volumn.png;image\bg.png;image\skin.png;image\order_play.png;image\play_2.png;image\recentbg.png;image\play.png;image\xiala.png;image\max.png;image\down.png;image\non-music.png;image\music.png;image\up_page.png;image\min.png;image\single_play.png;image\play3.png;image\list_play.png;image\silent.png;image\like_3.png;image\down_page.png;image\Logo.jpg;image\cyx.png;image\radio.png;image\up.png;image\ci.png;image\ilikebg.png;image\like_2.png;image\tubiao.png;image\default_cover.png;image\local.png;image\localbg.png;image\like_1.png;image\quit.png;image\rec\014.png;image\rec\039.png;image\rec\006.png;image\rec\021.png;image\rec\038.png;image\rec\013.png;image\rec\005.png;image\rec\020.png;image\rec\037.png;image\rec\012.png;image\rec\029.png;image\rec\004.png;image\rec\036.png;image\rec\011.png;image\rec\028.png;image\rec\003.png;image\rec\035.png;image\rec\010.png;image\rec\027.png;image\rec\019.png;image\rec\034.png;image\rec\026.png;image\rec\001.png;image\rec\018.png;image\rec\033.png;image\rec\025.png;image\rec\017.png;image\rec\040.png;image\rec\009.png;image\rec\032.png;image\rec\024.png;image\rec\016.png;image\rec\008.png;image\rec\031.png;image\rec\023.png;image\rec\015.png;image\rec\007.png;image\rec\030.png;image\rec\022.png;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">IMAGE.qrc;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\rcc.exe;image\like.png;image\add.png;image\shuffle.png;image\play_on.png;image\rec.png;image\shuffle_2.png;image\recent.png;image\volumn.png;image\bg.png;image\skin.png;image\order_play.png;image\play_2.png;image\recentbg.png;image\play.png;image\xiala.png;image\max.png;image\down.png;image\non-music.png;image\music.png;image\up_page.png;image\min.png;image\single_play.png;image\play3.png;image\list_play.png;image\silent.png;image\like_3.png;image\down_page.png;image\Logo.jpg;image\cyx.png;image\radio.png;image\up.png;image\ci.png;image\ilikebg.png;image\like_2.png;image\tubiao.png;image\default_cover.png;image\local.png;image\localbg.png;image\like_1.png;image\quit.png;image\rec\014.png;image\rec\039.png;image\rec\006.png;image\rec\021.png;image\rec\038.png;image\rec\013.png;image\rec\005.png;image\rec\020.png;image\rec\037.png;image\rec\012.png;image\rec\029.png;image\rec\004.png;image\rec\036.png;image\rec\011.png;image\rec\028.png;image\rec\003.png;image\rec\035.png;image\rec\010.png;image\rec\027.png;image\rec\019.png;image\rec\034.png;image\rec\026.png;image\rec\001.png;image\rec\018.png;image\rec\033.png;image\rec\025.png;image\rec\017.png;image\rec\040.png;image\rec\009.png;image\rec\032.png;image\rec\024.png;image\rec\016.png;image\rec\008.png;image\rec\031.png;image\rec\023.png;image\rec\015.png;image\rec\007.png;image\rec\030.png;image\rec\022.png;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\rcc.exe -name IMAGE IMAGE.qrc -o release\qrc_IMAGE.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\rcc.exe -name IMAGE IMAGE.qrc -o release\qrc_IMAGE.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">RCC IMAGE.qrc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RCC IMAGE.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\qrc_IMAGE.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qrc_IMAGE.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">IMAGE.qrc;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\rcc.exe;image\like.png;image\add.png;image\shuffle.png;image\play_on.png;image\rec.png;image\shuffle_2.png;image\recent.png;image\volumn.png;image\bg.png;image\skin.png;image\order_play.png;image\play_2.png;image\recentbg.png;image\play.png;image\xiala.png;image\max.png;image\down.png;image\non-music.png;image\music.png;image\up_page.png;image\min.png;image\single_play.png;image\play3.png;image\list_play.png;image\silent.png;image\like_3.png;image\down_page.png;image\Logo.jpg;image\cyx.png;image\radio.png;image\up.png;image\ci.png;image\ilikebg.png;image\like_2.png;image\tubiao.png;image\default_cover.png;image\local.png;image\localbg.png;image\like_1.png;image\quit.png;image\rec\014.png;image\rec\039.png;image\rec\006.png;image\rec\021.png;image\rec\038.png;image\rec\013.png;image\rec\005.png;image\rec\020.png;image\rec\037.png;image\rec\012.png;image\rec\029.png;image\rec\004.png;image\rec\036.png;image\rec\011.png;image\rec\028.png;image\rec\003.png;image\rec\035.png;image\rec\010.png;image\rec\027.png;image\rec\019.png;image\rec\034.png;image\rec\026.png;image\rec\001.png;image\rec\018.png;image\rec\033.png;image\rec\025.png;image\rec\017.png;image\rec\040.png;image\rec\009.png;image\rec\032.png;image\rec\024.png;image\rec\016.png;image\rec\008.png;image\rec\031.png;image\rec\023.png;image\rec\015.png;image\rec\007.png;image\rec\030.png;image\rec\022.png;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">IMAGE.qrc;G:\QT_env\QT5\5.15.2\msvc2019_64\bin\rcc.exe;image\like.png;image\add.png;image\shuffle.png;image\play_on.png;image\rec.png;image\shuffle_2.png;image\recent.png;image\volumn.png;image\bg.png;image\skin.png;image\order_play.png;image\play_2.png;image\recentbg.png;image\play.png;image\xiala.png;image\max.png;image\down.png;image\non-music.png;image\music.png;image\up_page.png;image\min.png;image\single_play.png;image\play3.png;image\list_play.png;image\silent.png;image\like_3.png;image\down_page.png;image\Logo.jpg;image\cyx.png;image\radio.png;image\up.png;image\ci.png;image\ilikebg.png;image\like_2.png;image\tubiao.png;image\default_cover.png;image\local.png;image\localbg.png;image\like_1.png;image\quit.png;image\rec\014.png;image\rec\039.png;image\rec\006.png;image\rec\021.png;image\rec\038.png;image\rec\013.png;image\rec\005.png;image\rec\020.png;image\rec\037.png;image\rec\012.png;image\rec\029.png;image\rec\004.png;image\rec\036.png;image\rec\011.png;image\rec\028.png;image\rec\003.png;image\rec\035.png;image\rec\010.png;image\rec\027.png;image\rec\019.png;image\rec\034.png;image\rec\026.png;image\rec\001.png;image\rec\018.png;image\rec\033.png;image\rec\025.png;image\rec\017.png;image\rec\040.png;image\rec\009.png;image\rec\032.png;image\rec\024.png;image\rec\016.png;image\rec\008.png;image\rec\031.png;image\rec\023.png;image\rec\015.png;image\rec\007.png;image\rec\030.png;image\rec\022.png;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\rcc.exe -name IMAGE IMAGE.qrc -o debug\qrc_IMAGE.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\QT_env\QT5\5.15.2\msvc2019_64\bin\rcc.exe -name IMAGE IMAGE.qrc -o debug\qrc_IMAGE.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">RCC IMAGE.qrc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RCC IMAGE.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\qrc_IMAGE.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qrc_IMAGE.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="image\Logo.jpg" />
+    <None Include="image\add.png" />
+    <None Include="image\bg.png" />
+    <None Include="image\ci.png" />
+    <None Include="image\cyx.png" />
+    <None Include="image\default_cover.png" />
+    <None Include="image\down.png" />
+    <None Include="image\down_page.png" />
+    <None Include="image\ilikebg.png" />
+    <None Include="image\like.png" />
+    <None Include="image\like_1.png" />
+    <None Include="image\like_2.png" />
+    <None Include="image\like_3.png" />
+    <None Include="image\list_play.png" />
+    <None Include="image\local.png" />
+    <None Include="image\localbg.png" />
+    <None Include="image\max.png" />
+    <None Include="image\min.png" />
+    <None Include="image\music.png" />
+    <None Include="image\non-music.png" />
+    <None Include="image\order_play.png" />
+    <None Include="image\play.png" />
+    <None Include="image\play3.png" />
+    <None Include="image\play_2.png" />
+    <None Include="image\play_on.png" />
+    <None Include="image\quit.png" />
+    <None Include="image\radio.png" />
+    <None Include="image\rec.png" />
+    <None Include="image\recent.png" />
+    <None Include="image\recentbg.png" />
+    <None Include="image\shuffle.png" />
+    <None Include="image\shuffle_2.png" />
+    <None Include="image\silent.png" />
+    <None Include="image\single_play.png" />
+    <None Include="image\skin.png" />
+    <None Include="image\tubiao.png" />
+    <None Include="image\up.png" />
+    <None Include="image\up_page.png" />
+    <None Include="image\volumn.png" />
+    <None Include="image\xiala.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
